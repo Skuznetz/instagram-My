@@ -25,17 +25,13 @@
         <%=link_to "New Post",new_post_path %>  |
       </li>
       <% if current_user %>
-      <% else %>
-      
-      
-      
-
-      
-      <li>
+       <li>
+         <%= link_to "Logout",destroy_user_session_path, method: :delete %>
+         </li>
+         <% else %>
+         <li>
         <%= link_to "Login",new_user_session_path %>  |
-
-        
-      </li>
+        </li>
 
       <li>
       <%= link_to "Register",new_user_registration_path %>
@@ -54,6 +50,10 @@
        <div class="container">
         <div class="row">
          <div class="col-lg-8">
+         <% flash.each do |a, b| %>
+         <div class="alert alert-success"><%= b %></div>
+         <% end %>
+
           <%= yield %>
          </div>
         
