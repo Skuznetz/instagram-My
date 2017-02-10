@@ -22,28 +22,28 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         
-        <%=link_to "New Post",new_post_path %>  |
+        <%=link_to "Новое сообщение",new_post_path %>  |
       </li>
       <% if current_user %>
        <li>
-         <%= link_to "Logout",destroy_user_session_path, method: :delete,confirm: "Are you sure?" %>
+         <%= link_to "Выход",destroy_user_session_path, method: :delete,confirm: "Вы уверены,ЧТО ЭТОГО ХОТИТЕ?" %>
          </li>
          <% else %>
          <li>
-        <%= link_to "Login",new_user_session_path %>  |
+        <%= link_to "Вход",new_user_session_path %>  |
         </li>
 
       <li>
-      <%= link_to "Register",new_user_registration_path %>
+      <%= link_to "Регистрация",new_user_registration_path %>
       </li>
       
       <% end %>
 
       
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <form class="form-inline my-2 my-lg-0 ">
       <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Search</button>
     </form>
   </div>
 </nav>
